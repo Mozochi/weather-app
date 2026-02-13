@@ -1,5 +1,5 @@
 import requests
-import json
+
 
 def getCurrentWeather(key: str, url: str, loc: str) -> dict: 
     """
@@ -26,7 +26,7 @@ def getCurrentWeather(key: str, url: str, loc: str) -> dict:
 
         weatherData = {"temps": [currentData["temp_c"], currentData["feelslike_c"], currentData["windchill_c"]],
                        "wind": [currentData["wind_mph"], currentData["gust_mph"], currentData["wind_dir"]],
-                       "rain": [currentData["precip_mm"], currentData["humidity"], [currentData["cloud"]]]
+                       "rain": [currentData["precip_mm"], currentData["humidity"], currentData["cloud"]]
                        }
 
         
